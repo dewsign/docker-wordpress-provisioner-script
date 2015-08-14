@@ -1,0 +1,30 @@
+#!/bin/bash
+# Provisions a Wordpress/Docker development environment
+
+echo "Provisioning environment..."
+echo "Removing redundant provisioner repo"
+rm -rf .git
+rm -rf .gitignore
+echo "*** Cloning https://github.com/dewsign/wordpress-docker.git ***"
+git clone https://github.com/dewsign/wordpress-docker.git
+echo "Cleaning up wordpress-docker directory"
+rm -rf wordpress-docker/wordpress-hjsgidv/
+echo "*** Done ***"
+echo "*** Cloning latest WordPress into wordpress/ ***"
+git clone https://github.com/WordPress/WordPress.git wordpress-hjsgidv/
+echo "*** Done ***"
+mv -v wordpress-docker/* ./
+rm -rf wordpress-docker/
+echo "**********************************************"
+echo "**********************************************"
+cat << "EOF"
+  _____                   _
+ |  __ \                 | |
+ | |  | | ___  _ __   ___| |
+ | |  | |/ _ \| '_ \ / _ \ |
+ | |__| | (_) | | | |  __/_|
+ |_____/ \___/|_| |_|\___(_)
+EOF
+echo "**********************************************"
+echo "Finished provisioning environment... Have fun!"
+echo "**********************************************"
