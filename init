@@ -5,6 +5,7 @@ echo "Provisioning environment..."
 echo "Removing redundant provisioner repo"
 rm -rf .git
 rm -rf .gitignore
+rm -rf README.md
 echo "*** Cloning https://github.com/dewsign/wordpress-docker.git ***"
 git clone https://github.com/dewsign/wordpress-docker.git
 echo "Cleaning up wordpress-docker directory"
