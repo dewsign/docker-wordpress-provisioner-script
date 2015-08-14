@@ -16,6 +16,7 @@ git clone https://github.com/WordPress/WordPress.git wordpress-hjsgidv/
 echo "*** Done ***"
 mv -v wordpress-docker/* ./
 rm -rf wordpress-docker/
+rm -rf wordpress
 echo "**********************************************"
 echo "**********************************************"
 cat << "EOF"
